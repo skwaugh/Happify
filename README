@@ -1,5 +1,10 @@
 Sawyer Waugh
-swaugh@seas.upenn.eduSummer 2014University of PennsylvaniaComputer & Information ScienceIndependent StudySupervised by Dr. Lyle Ungar, Dr. Hansen Andrew Schwartz
+swaugh@seas.upenn.edu
+Summer 2014
+University of Pennsylvania
+Computer & Information Science
+Independent Study
+Supervised by Dr. Lyle Ungar, Dr. Hansen Andrew Schwartz
 
 
 - “Report.pdf” contains the write-up for my project
@@ -13,22 +18,40 @@ swaugh@seas.upenn.eduSummer 2014University of PennsylvaniaComputer & Informat
 
 
 makeUserSet() - creates a global HashSet<String> of the Happify users using the table “happinessScores_avg” in database “Happify” 
+
 loadUserMap() - Using the userID's and corresponding scores in happinessScores_avg.txt,  this method creates a HashMap of String userid --> User details for easy lookup
+
 removeGratStatements() - parses a file of sentences and removes the “gratitude clause"
+
 removeWord(String[], int) - takes in String array and an index, and returns a String array with the string at that index removed
+
 parse() - takes in a file of single sentences (singleSentenceMessages.txt), produces, singleSentParsed.txt, which shows you the grammatical representation of each sentence in tree format.
+
 chunk() - takes in a file of single sentences (singleSentenceMessages.txt), produces singleSentChunked.txt. 
+
 posTag() - takes in a file of single sentences (singleSentenceMessages.txt), produces singleSentTagged.txt, which tells you each String’s part of speech
+
 SentenceDetect(Line[]) - Sentence Detect splits each gratitude statement into individual sentences.  These are then passed to getGratitudeWordCount() to determine which statement is the best choice. 
+
 getGratitudeWordCount(String) - picks the sentence that has the highest probability of being the main gratitude statement.  This is achieved through counting the number of explicit "gratitude" words & phrases used these words and phrases can be found in ngram files.
+
 assocIDwithMessage() - takes in 2 files, one containing original data from happify, the other with cleaned up grat statements. Then appends the cleaned up grat statements to user id, message id, scores ,etc
+
 correct() - used to clean up the messy data from Happify, disregard
+
 findNgrams(int) - finds n-grams, taking in a file with lines of the form "messageid, user id, date, gratStatement"
+
 findAverageScore(int, List<String>) - finds the average User's score for a particular Ngram
+
 rankByFrequency(HashMap<String, List<String>>) - returns an array of the ngrams in order of frequency
+
 refineByFrequency(int, HashMap<String, ArrayList<String>>) - takes in an ngram mapping, removes those who do not occur a particular # of times
+
 significanceTest(HashMap<String, ArrayList<String>>) 	- takes in HashMap<String, ArrayList<String>>, which maps an ngram to a list of Happify users who mentioned it
 							- outputs a file that contains the significance tests for each n gram
+
 getScores(List<String>) - returns an array of the happiness scores of the people who mentioned a particular ngram
+
 getStats() - finds stats for the entire sample
+
 doubleListToArray(List<Double>) - helper method
