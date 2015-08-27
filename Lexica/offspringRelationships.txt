@@ -1,0 +1,7 @@
+parent
+parents
+mom
+mum
+dad
+father
+rents

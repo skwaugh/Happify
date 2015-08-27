@@ -1,0 +1,9 @@
+dog
+dogs
+cat
+cats
+fish
+fishy
+fishes
+horse
+horses
